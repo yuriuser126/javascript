@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Object 객체 생성 => tv : 참조변수(객체이름)
+
+        //1번 방식으로 객체 생성 (자바와 비슷하다)
+        
+        var tv = new Object();
+        // 객체를 생성했으면 메서드나 속성을 추가할 수 있다.
+        tv.color="white";//color 라는 속성에 흰색을 부여함
+        tv.price=300000;//price 속성에 30만원 부여함
+        tv.info=function(){//메소드 구현(tv한대를 객체를 만들어서 메소드 구현을 한다)
+            document.write("tv 색상 : "+this.color,"<br>"); // this는 자기자신의 객체이다(tv 객체)
+            document.write("tv 가격 : "+this.price,"<br>"); // this는 자기자신의 객체이다(tv 객체)
+        }
+        
+        
+        //2번 방식으로 객체 생성 (자바와 다르다)
+        var car={
+            color:"black",
+            price:5000000,
+            info:function(){ //매소드 구현(car 객체에 매소드 구현했다)
+                document.write("자동차 색상 : "+this.color,"<br>"); // this는 자기자신의 객체이다(자동차 객체)
+                document.write("자동차 가격 : "+this.price,"<br>"); // this는 자기자신의 객체이다(자동차 객체)
+            }
+        }
+
+
+        document.write("<h1>tv 객체 메소드 호출</h1>");
+        tv.info(); // 메소드 호출(tv 객체에 메소드 호출을 한다)
+        
+        document.write("<h1>자동차 객체 메소드 호출</h1>");
+        car.info(); // 메소드 호출(자동차 객체에 메소드 호출을 한다)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

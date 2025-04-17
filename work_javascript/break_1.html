@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        for(var i=1; i<=10; i++){
+            /*
+            if (i == 6) {
+                document.write(999,"<br>");
+                break;
+            }
+            중괄호 왠만하면 무조건*/
+
+            /*출력 안됨
+            if (i == 6) 
+                document.write(999,"<br>");
+                break;
+            */
+            
+        // 출력안됨
+        //    if (i == 6)  document.write(999,"<br>"); break;
+           
+        // 출력됨
+        // if (i == 6) {document.write(999,"<br>"); break;}
+
+
+        // if (i == 6) {document.write(999,"<br>"); break;}
+        // if문은 중괄호 생략하면서 한줄로 사용가능(실행문이 한개만 올때)
+        if (i == 6)  break;
+        document.write(i,"<br>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

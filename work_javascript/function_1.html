@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var count = 0;
+        
+        //함수호출
+        myFnc(); //호이스팅 기능 사용 > 먼저 호출출
+
+        //함수 구현
+        function myFnc() { //일반함수수
+            count++;
+            document.write("hello"+count+"<br>");
+        }
+
+        //함수호출
+        myFnc();
+        
+        //함수호출
+        // theFnc(); 익명함수는 호출이 먼저 안됨 호이스팅 불가가
+
+        //함수 구현
+        // function theFnc() {
+        var theFnc = function () { //익명함수
+            count++;
+            document.write("bye"+count+"<br>");
+        }
+
+        //함수호출
+        theFnc();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

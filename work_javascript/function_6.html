@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #galleryZone{
+            text-align: center;
+        }
+    </style>
+    <script>
+        var num=1;
+        function gallery(direct) {
+            if (direct) { //0은 거짓, 1은 참 -> gallery(0) gallery(1)
+                if (num == 9) {
+                    return;
+                }
+                // document.write("111"); //다음
+                num++;
+            } else {
+                if (num == 1) {
+                    return;
+                }
+                // document.write("222"); //이전
+                num--;
+            }
+            var imgTag = document.getElementById("photo");
+            // setAttribute 매소드로 속성을 부여(src 속성에 이미지 파일을 정함)
+            // imgTag.setAttribute("src", "images/pic_3.jpg");
+            imgTag.setAttribute("src", "images/pic_"+num+".jpg");
+            
+        }
+    </script>
+</head>
+<body>
+    <div id="galleryZone">
+        <p>
+            <img src = "images/pic_1.jpg" id="photo">
+        </p>
+        <p>
+            <button onclick="gallery(0)">이전</button>
+            <button onclick="gallery(1)">다음</button>
+        </p>
+    </div>
+</body>
+</html>

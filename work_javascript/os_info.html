@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //navigator 객체의 userAgent 속성성
+        var info =  navigator.userAgent.toLowerCase(); //toLowerCase() : 소문자 변환
+        var osimg = null; //정의되지않음과 눌은 다름
+        //Windows, Chrome => 운영체제와 브라우저 정보
+        document.write(info);
+
+        if (info.indexOf("windows")>=0) {
+            osimg = "windows.png";
+        }
+        else if (info.indexOf("macintosh")>=0) {
+            osimg = "macintosh.png";
+        }
+        else if (info.indexOf("iphone")>=0) {
+            osimg = "iphone.png";
+        }
+        else if (info.indexOf("android")>=0) {
+            osimg = "android.png";
+        }
+
+        document.write("<img src = 'images/"+osimg+"'><br>")
+        document.write("모니터 해상도 너비 : "+screen.width+"px","<br>");
+        document.write("모니터 해상도 높이 : "+screen.height+"px","<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

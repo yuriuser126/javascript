@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: #f00;
+        }
+        .blue{
+            color: #00f;
+        }
+        .aqua{
+            color:aqua
+        }
+    </style>
+    <script>
+        // 5의 배수면서 7의배수 아님
+        for(var i=1; i<=100; i++){
+            if (i%5 == 0 && i%7 != 0) {
+                document.write("<p class='red'>"+i+"</p>");
+            }
+            //5의배수 아니고 7의배수 아닌거
+            else if(i%5 != 0 && i%7 != 0){
+            document.write("<p class='blue'>"+i+"</p>");
+            }
+            //5의 배수면서 7의 배수
+            else if(i%5 == 0 && i%7 == 0){
+            document.write("<p class='aqua'>"+i+"</p>");
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
